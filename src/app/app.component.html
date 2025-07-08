@@ -1,0 +1,22 @@
+<div class="app-container">
+    <header class="app-header">
+        <h1>{{ title }}</h1>
+    </header>
+
+    <main class="app-main">
+        <div *ngIf="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading employee data...</p>
+        </div>
+
+        <div *ngIf="error" class="error">
+            <p>{{ error }}</p>
+            <button (click)="loadEmployeeData()" class="retry-button">Retry</button>
+        </div>
+
+        <div *ngIf="!loading && !error" class="content-grid">
+            <app-employee-table [employees]="employees"></app-employee-table>
+            <app-employee-chart [employees]="employees"></app-employee-chart>
+        </div>
+    </main>
+</div>

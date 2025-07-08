@@ -1,0 +1,57 @@
+.table-container {
+  margin: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.table-container h2 {
+  margin: 0;
+  padding: 20px;
+  background: #2c3e50;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  background: #34495e;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.employee-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.employee-table tr:hover {
+  background: #f8f9fa;
+}
+
+.employee-table tr.low-hours {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.employee-table tr.low-hours:hover {
+  background-color: #ffcdd2;
+}
+
+.employee-table th:first-child,
+.employee-table td:first-child {
+  width: 60%;
+}
+
+.employee-table th:last-child,
+.employee-table td:last-child {
+  width: 40%;
+  text-align: right;
+}
